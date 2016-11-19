@@ -6,5 +6,6 @@ print( "Bon, ça a l'air de marcher!" )
 all_iconv_encs <- function( string ){
   sapply( iconvlist(), function(x){
     iconv( x, from = x )
+    iconv( string, from = x )
   } )
 }
